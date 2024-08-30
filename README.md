@@ -28,7 +28,7 @@ To begin using InPheRNo-ChIP, ensure you have the following prerequisites:
 # Env set up
 git clone https://github.com/TheChenSu/InPheRNo-ChIP.git
 cd InPheRNo-ChIP
-conda env create -f InPheC_Env.yml
+conda env create -f InpheC_0820.yml
 conda activate inpheC
 
 # Run the pipeline steps
