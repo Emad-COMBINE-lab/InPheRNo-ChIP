@@ -77,7 +77,7 @@ class Step1ArgumentParser:
         self.parser.add_argument(
             "-it",
             "--input_tf_addr",
-            default="./Data/mapped_hmtfs_legittfs-HumantfDB.csv",
+            default="./Data/mapped_hmTFs_legitTFs-HumanTFDB.csv",
             help="CSV file containing list of tfs.",
         )
         self.parser.add_argument(
