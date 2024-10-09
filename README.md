@@ -26,7 +26,7 @@ To begin using InPheRNo-ChIP, ensure you have the following prerequisites:
 
 ```bash
 # Env set up
-git clone https://github.com/TheChenSu/InPheRNo-ChIP.git
+git clone https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP.git
 cd InPheRNo-ChIP
 conda env create -f InpheC_0820.yml
 conda activate inpheC
@@ -102,8 +102,8 @@ For detailed installation instructions, usage guides, and in-depth information o
 
 # Getting Help
 For assistance with InPheRNo-ChIP, we offer 2 channels:
-- **GitHub Issues**: For bug reports or feature requests, please use the [Issues section](https://github.com/TheChenSu/InPheRNo-ChIP/issues).
-- **GitHub Discussions**: For general questions, ideas, or community discussions, the [Discussions section](https://github.com/TheChenSu/InPheRNo-ChIP/discussions) is the perfect place.
+- **GitHub Issues**: For bug reports or feature requests, please use the [Issues section](https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP/issues).
+- **GitHub Discussions**: For general questions, ideas, or community discussions, the [Discussions section](https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP/discussions) is the perfect place.
 
 Your questions and feedback are invaluable to us, and we encourage you to utilize these channels to enhance your experience with InPheRNo-ChIP. 
 
