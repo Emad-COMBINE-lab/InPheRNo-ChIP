@@ -13,6 +13,7 @@ Welcome to InPheRNo-ChIP's documentation!
    introduction
    installation
    usage
+   usage_own_data
 
 
 

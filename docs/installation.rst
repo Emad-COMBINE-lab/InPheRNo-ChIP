@@ -15,7 +15,7 @@ Before installing **InPheRNo-ChIP**, ensure that Conda is installed on your syst
 Creating a Conda Environment
 ----------------------------
 
-**InPheRNo-ChIP** requires specific versions of libraries, managed using a Conda environment. The project repository includes an `InPheC_Env.yml` file that specifies these dependencies, including Python 3.10.12 and PyMC 5.9.2.
+**InPheRNo-ChIP** requires specific versions of libraries, managed using a Conda environment. The project repository includes an `inpheC_0820.yml` file that specifies these dependencies, including Python 3.10.12 and PyMC 5.9.2.
 
 To set up and activate the Conda environment, follow these steps:
 
@@ -25,16 +25,16 @@ To set up and activate the Conda environment, follow these steps:
 
    .. code-block:: bash
 
-      git clone https://github.com/TheChenSu/InPheRNo-ChIP.git
+      git clone https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP.git
       cd InPheRNo-ChIP
 
 2. **Create the Conda Environment**:
    
-   Use the `InPheC_Env.yml` file, which is pre-configured for Python 3.10.12 and PyMC 5.9.2, to create a new Conda environment:
+   Use the `inpheC_0820.yml` file, which is pre-configured for Python 3.10.12 and PyMC 5.9.2, to create a new Conda environment:
 
    .. code-block:: bash
 
-      conda env create -f InPheC_Env.yml
+      conda env create -f inpheC_0820.yml
 
    This command will create a new environment named `inpheC` and install all the required dependencies.
 
@@ -50,11 +50,11 @@ To set up and activate the Conda environment, follow these steps:
 Updating the Environment
 ------------------------
 
-Should the `InPheC_Env.yml` file be updated, synchronize your environment with:
+Should the `inpheC_0820.yml` file be updated, synchronize your environment with:
 
 .. code-block:: bash
 
-   conda env update -f InPheC_Env.yml --prune
+   conda env update -f inpheC_0820.yml --prune
 
 Troubleshooting
 ---------------
@@ -62,12 +62,13 @@ Troubleshooting
 If you encounter installation issues:
 
 - **Update Conda**: Ensure your Conda installation is up to date by running `conda update conda`.
-- **Check the Environment File**: Verify that the `InPheC_Env.yml` file you are using is the correct one from the **InPheRNo-ChIP** repository.
+- **Check the Environment File**: Verify that the `inpheC_0820.yml` file you are using is the correct one from the **InPheRNo-ChIP** repository.
 - **Consult the Issue Tracker**: For specific errors, review the project's issue tracker to see if others have encountered and resolved similar issues.
 - **Recreate the Environment**: Sometimes, issues can be resolved by removing the existing Conda environment and recreating it:
   
   .. code-block:: bash
+
       conda env remove -n inpheC
-      conda env create -f InPheC_Env.yml
+      conda env create -f inpheC_0820.yml
 
 - **Open a GitHub Issue**: If your issue persists, please open a ticket on our Github. Include detailed error logs and environment information to help us diagnose and address your issue effectively
