@@ -15,12 +15,12 @@ We will cover:
    :depth: 2
 
 
-Overview of Required Data
--------------------------
+Overview of Required Data In This Guide
+---------------------------------------
 
-To run InPheRNo-ChIP, you will need the following:
+You will need the following data:
 
-1. **RNA-seq Data**: A gene expression count matrix (genes × samples) containing normalized expression values for both target genes and transcription factors (TFs) across samples with known phenotypic labels.
+1. **RNA-seq Data**: A gene expression count matrix (genes × samples) containing expression values for both target genes and transcription factors (TFs) across samples with known phenotypic labels.
 
 2. **TF-specific ChIP-seq Data**: ChIP-seq peak files in BED format for the TFs of interest in your study.
 
@@ -28,20 +28,28 @@ To run InPheRNo-ChIP, you will need the following:
 
 Preparing RNA-seq Data
 ----------------------
+In this section, we will explain how to prepare the RNA-seq data required for InPheRNo-ChIP, specifically focusing on generating the three essential inputs for InPheC_Step1.py, as shown in our GitHub repo's `README.md <https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP/tree/main#readme>`_:
 
+- **Input 1.1**: Normalized counts (e.g., ``RNAseq_expr_voom_normalized.csv``)
+- **Input 1.2**: P-values of gene-phenotype associations for significant genes (e.g., ``RNAseq_pval_gene-phenotype_significant.csv``)
+- **Input 1.3**: P-values of gene-phenotype associations for all genes (e.g., ``RNAseq_pval_gene-phenotype_allGenes.csv``)
 
-**Requirement**: A gene expression count matrix (genes × samples) containing normalized expression values.
+We will walk through the steps needed to prepare these inputs from your RNA-seq and phenotype data.
 
 **Approach**:
 
 1. **Data Acquisition**:
 
-   - Obtain a gene expression count matrix for your samples. This can be from your own experiments or publicly available datasets.
-   - If you have raw RNA-seq reads, process them to generate the count matrix using standard RNA-seq pipelines. This typically involves read alignment and quantification, but in this guide we expect the input to be a count matrix.
-   - Tools for processing raw reads include aligners like **STAR** or **HISAT2** and quantification tools like **featureCounts** or **HTSeq-count**.
+   - If you have raw RNA-seq reads, process them to generate a gene expression count matrix (genes × samples) using standard RNA-seq pipelines.
+     
+      - Alignment: Use aligners like **STAR** or **HISAT2** to map reads to the reference genome.
+      - Quantification: Use tools like **featureCounts** or **HTSeq-count** to obtain raw counts.
+   
+   - Alternatively, if you already have a gene expression count matrix, you can proceed directly.
 
-2. **Quality Control**:
+2. **Sample Selection and Quality Control**:
 
+   - Convert all gene identifiers to a consistent format (e.g., HGNC symbols) to ensure compatibility across datasets.
    - Assess the quality of your gene expression data.
    - Filter out low-quality samples or genes with low expression levels as appropriate for your analysis.
    - **Optional**: Remove genes located on sex chromosomes if sex-specific effects are not relevant to your study.
@@ -60,23 +68,24 @@ Preparing RNA-seq Data
      - In our analysis, we used **ComBat-seq** from the **sva** package to adjust for batch effects.
      - Alternative tools include **limma**'s `removeBatchEffect` function or **RUVSeq**.
 
-4. **Differential Expression Analysis**:
-
-   - Perform differential expression (DE) analysis to identify genes associated with your phenotype.
-   - In our analysis, we used **edgeR** to perform DE analysis, incorporating factors like batch and lineage in the design matrix.
-   - Alternative tools include **DESeq2** and **limma-voom**.
-   - **Optional**: Exclude transcription factor genes from the list of differentially expressed genes if they will serve as regulators in your GRN.
-
-5. **Transformation for Linear Modeling**:
+4. **Transformation for Linear Modeling**:
 
    - Transform the normalized count data to be suitable for linear modeling.
-   - We applied the **voom** transformation using **limma**'s `voom` function with quantile normalization.
-   - This transformation estimates the mean-variance relationship and provides weights for linear modeling.
+   - In our analysis, we applied the **voom** transformation using **limma**'s `voom` function with quantile normalization. 
+   - We then transformed each gene's expression values across samples to follow a standard normal distribution (mean zero, variance one), ensuring comparability across genes.
+
+5. **Differential Expression Analysis**:
+
+   - Perform differential expression (DE) analysis to identify (non-TF) genes associated with your phenotype.
+   - In our analysis, we used **edgeR** to perform DE analysis, incorporating factors like batch and lineage in the design matrix.
+   - Alternative tools include **DESeq2**.
 
 6. **Prepare Input Files**:
 
-   - Save the list of differentially expressed genes and their associated p-values.
-   - Ensure that gene identifiers are consistent across all datasets (e.g., using HGNC symbols).
+   - Save the voom-transformed and inverse-quantile normalized expression data from step 5 here to a CSV file (e.g., input 1.1 in the GitHub repo's `README.md <https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP/tree/main#readme>`_): ``RNAseq_expr_voom_normalized.csv``).
+   - Save the DE results for significant genes from step 6 here in a CSV file (e.g., input 1.2: ``RNAseq_pval_gene-phenotype_significant.csv``).
+   - Save the DE results for all genes (not just significant ones) from step 6 here in a CSV file  (e.g., input 1.3: ``RNAseq_pval_gene-phenotype_allGenes.csv``)
+   - All three files should be placed in ``./Data/RNA_seq/``
 
 **Notes**:
 
@@ -86,7 +95,7 @@ Preparing RNA-seq Data
 Preparing ChIP-seq Data
 -----------------------
 
-**Requirement**: ChIP-seq peak files in BED format for your TFs of interest.
+In this section, we will explain how to prepare ChIP-seq data.
 
 **Approach**:
 
@@ -99,15 +108,14 @@ Preparing ChIP-seq Data
 
 2. **Sample Filtering**:
 
-   - Map TFs in your sample metadata to universal gene names to ensure consistency across datasets.
+   - Convert all gene identifiers to a consistent format (e.g., HGNC symbols) to ensure compatibility across datasets.
    - Remove low-quality samples and those not matching your criteria.
    - In our analysis, we filtered out samples with low quality or incorrect annotations based on metadata review.
 
 3. **Combining Replicates**:
 
    - If you have biological replicates, combine peaks from replicates to identify reproducible binding sites.
-   - In our analysis, we used the **IDR (Irreproducible Discovery Rate)** framework to combine peaks from replicates and select reproducible binding sites.
-   - Alternative tools include **PePr**, **SICER**, or the **ENCODE Consistency Model**.
+   - In our analysis, we used the **IDR (Irreproducible Discovery Rate)** framework from `ENCODE <https://www.encodeproject.org/software/idr/>`_ to combine peaks from replicates and select reproducible binding sites.
 
 4. **Filtering Peaks**:
 
@@ -117,11 +125,11 @@ Preparing ChIP-seq Data
 5. **Assigning Peaks to Genes**:
 
    - Assign peaks to genes based on proximity to transcription start sites (TSS) or other genomic features.
-   - In our analysis, we used **T-Gene** to associate peaks with potential target genes.
+   - In our analysis, we used **T-Gene** from MEME suite (`link <https://meme-suite.org/meme/doc/tgene.html?man_type=web>`_) to associate peaks with potential target genes.
 
 6. **Prepare Input Files**:
 
-   - Extract p-values or scores for each TF-gene pair from the peak assignment results.
-   - Ensure that gene identifiers are consistent with those used in other data types.
+   - For each TF, extract p-values or scores for each TF-gene pair from the peak assignment results and output to a .BED file.
+   - Place processed BED files in the ``./Data/ChIP_GSExxx`` directory (replace GSExxx with the appropriate identifier).
 
 

@@ -4,7 +4,7 @@ Introduction
 InPheRNo-ChIP: Inference of Phenotype-relevant Regulatory Networks with ChIP-seq Integration
 --------------------------------------------------------------------------------------------
 
-InPheRNo-ChIP is a computational framework designed to reconstruct phenotype-relevant gene regulatory networks (GRNs) by integrating RNA-seq, TF-specific ChIP-seq, and phenotypic labels. This tool employs a probabilistic graphical model to model the simultaneous effects of transcription factors on target genes, facilitating the identification of regulatory interactions that are crucial for specific phenotypic outcomes. By leveraging multi-modal data, InPheRNo-ChIP enhances the accuracy of GRN predictions, making it particularly useful in developmental biology and disease modeling.
+InPheRNo-ChIP is a computational framework designed to reconstruct phenotype-relevant gene regulatory networks (GRNs) by integrating RNA-seq, TF-specific ChIP-seq, and phenotypic labels. 
 
 Framework Overview
 ------------------
