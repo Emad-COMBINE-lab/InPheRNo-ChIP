@@ -1,0 +1,1175 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InPheC_Step2 &#8212; InPheRNo-ChIP 1.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script src="../_static/documentation_options.js?v=56dcb7b8"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/InPheC_Step2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">InPheRNo-ChIP 1.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Usage Guide
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Usage Guide
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">InPheC_Step2</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for InPheC_Step2</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">InPheC_Step2.py</span>
+
+<span class="sd">This script is part of the InPheRNo-ChIP project and is responsible for:</span>
+
+<span class="sd">    - Estimating the parameters of the model.</span>
+<span class="sd">    - Running the probabilistic graphical model (PGM).</span>
+<span class="sd">    - Incorporating enhancements in model Qij to account for inter-lineage dependencies and maintaining numerical stability.</span>
+
+<span class="sd">In terms of the speed, this example set up takes 16 min per batch (100 genes) on a Macbook M1max chip. (in total, 13 batches leads to 3.5 hours)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">cloudpickle</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">pymc</span> <span class="k">as</span> <span class="nn">pm</span>
+<span class="kn">import</span> <span class="nn">pytensor.tensor</span> <span class="k">as</span> <span class="nn">pt</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">beta</span><span class="p">,</span> <span class="n">rv_continuous</span><span class="p">,</span> <span class="n">uniform</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">from</span> <span class="nn">utils_logo</span> <span class="kn">import</span> <span class="n">print_logo</span>
+<span class="kn">import</span> <span class="nn">warnings</span> <span class="c1"># suppress warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+
+<span class="c1"># Global seed for reproducibility</span>
+<span class="n">DEFAULT_SEED</span> <span class="o">=</span> <span class="mi">1011</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">DEFAULT_SEED</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Running on PyMC v</span><span class="si">{</span><span class="n">pm</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Step2ArgumentParser">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.Step2ArgumentParser">[docs]</a>
+<span class="k">class</span> <span class="nc">Step2ArgumentParser</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Parses and handles command-line arguments for the step2_main.py script, ensuring proper validation and configuration</span>
+<span class="sd">    of input and output paths and file-related options for RNA-seq and ChIP-seq data processing.</span>
+
+<span class="sd">    Usage:</span>
+<span class="sd">        - To see detailed argument options, use: `python InPheC_Step2.py --help`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the argument parser with a description and adds command-line arguments for data processing.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Loading input and output directories for Main_step2.py&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_add_arguments</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">validate_args</span><span class="p">()</span>  <span class="c1"># check if directories exist</span>
+
+    <span class="k">def</span> <span class="nf">_add_arguments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Directory arguments</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-id_rna&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--in_dir_rna&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;./Data/RNA_seq/&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;address of directory containing gene-pheno association for ALL genes&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-id&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--in_dir&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;./step1/&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;address of input directory containing outputs of InPheC_step1.py&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-od&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--out_dir&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;./step2/&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;address of directory containing intermediate output of InPheC_step2.py&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># File-related arguments</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-loi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--lineage_of_interest&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;h64&quot;</span><span class="p">,</span> <span class="s2">&quot;dEN&quot;</span><span class="p">],</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;keyword of lineage we are interested in the chip-seq files. this argument is fixed for now.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-igp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--input_gene_pheno&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;RNAseq_pval_gene-pheno_intersect_chip_&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;name of file containing gene-phenotype association p-values for set of interest&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-igp_a&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--input_gene_pheno_all&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;RNAseq_pval_gene-phenotype_gse361-gse981-gse371_allGenes.csv&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;name of file containing gene-phenotype association p-values for ALL genes&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-itgGEx&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--input_TF_gene&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;RNAseq_pval_gene-tf_intersect_chip_&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;name of file containing TF-gene association pseudo p-values generated by InPheC_step1.py&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-itgchip&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--input_TF_gene_chip&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;ChIPseq_pval_gene-tf_minQ_&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;chip-seq data containing pseudo values of TF-gene associations for 2 lineages.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1">## pgm&#39;s parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-sb&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--start_batch&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Start index of the batch. Useful if program gets killed in the middle or for parallelization.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-ni&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--n_iteration&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">4000</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;number of iterations for the PGM. Typically, 1000 to 5000 draws per chain are suggested for a single chain.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="c1"># parser.add_argument(&#39;-nb&#39;, &#39;--n_burn&#39;, type=int, default=100, help=&#39;number of iterations to burn.&#39;)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-nc&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--n_chain&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;number of chains in pm.sample().&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-nt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--n_tune&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;A common practice is to use a similar number of tuning iterations as draws, often around 1000 to 5000.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-bs&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--batch_size&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of genes to run before saving to disk. Suggestions: 100 genes per batch. Here set to 10 due to github push limits&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;-pT&quot;</span><span class="p">,</span> <span class="s2">&quot;--Prior_T&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">22</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;prior of Tij&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_validate_directory</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">directory_path</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks if a specified directory path exists and is a valid directory.</span>
+
+<span class="sd">        :param directory_path: The directory path to validate.</span>
+<span class="sd">        :type directory_path: str</span>
+<span class="sd">        :param description: A brief description of the directory&#39;s intended use, for error messages.</span>
+<span class="sd">        :type description: str</span>
+<span class="sd">        :raises FileNotFoundError: If the directory does not exist or is not a directory.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">directory_path</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">directory_path</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="s2"> not found: </span><span class="si">{</span><span class="n">directory_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Step2ArgumentParser.validate_args">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.Step2ArgumentParser.validate_args">[docs]</a>
+    <span class="k">def</span> <span class="nf">validate_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validates the existence of directories specified in command-line arguments and creates the output directory if it does not exist.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_directory</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_dir_rna</span><span class="p">,</span> <span class="s2">&quot;Input RNA directory&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_directory</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_dir</span><span class="p">,</span> <span class="s2">&quot;Input directory&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt;&gt; Created output directory: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_directory</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">,</span> <span class="s2">&quot;Output directory&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Step2ArgumentParser.get_args">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.Step2ArgumentParser.get_args">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the validated command-line arguments.</span>
+
+<span class="sd">        :return: Parsed command-line arguments.</span>
+<span class="sd">        :rtype: argparse.Namespace</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Step1DataLoader">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.Step1DataLoader">[docs]</a>
+<span class="k">class</span> <span class="nc">Step1DataLoader</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles the loading of data from outputs of the first step in the InPheRNo-ChIP project pipeline as well as RNA-seq data.</span>
+
+<span class="sd">    This class is tasked with ensuring data integrity and format correctness as it prepares the data for subsequent processing stages.</span>
+
+<span class="sd">    :param args: Parsed command-line arguments containing paths and file-related settings.</span>
+<span class="sd">    :type args: argparse.Namespace</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the data loader with command-line arguments specifying paths and settings.</span>
+
+<span class="sd">        :param args: Parsed command-line arguments.</span>
+<span class="sd">        :type args: argparse.Namespace</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">args</span> <span class="o">=</span> <span class="n">args</span>
+
+<div class="viewcode-block" id="Step1DataLoader.load_csv">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.Step1DataLoader.load_csv">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; Loads a CSV file into a pandas DataFrame, using a specified delimiter.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">delimiter</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Step1DataLoader.load_data">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.Step1DataLoader.load_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads necessary data files from specified directories for further processing, including gene-TF associations,</span>
+<span class="sd">        gene-phenotype associations, and ChIP-seq data. Validates the loading process by printing the shapes of loaded datasets.</span>
+
+<span class="sd">        :return: Tuple containing DataFrames for gene-phenotype associations for all genes, gene-phenotype associations for the set of interest,</span>
+<span class="sd">                 gene-TF associations, and ChIP-seq gene-TF associations.</span>
+<span class="sd">        :rtype: tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">delim</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Load 3 files from Main_step1.py</span>
+            <span class="n">addr_out_pvalue_gt</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_dir</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">input_TF_gene</span><span class="si">}{</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">lineage_of_interest</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">addr_out_pvalue_gp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_dir</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">input_gene_pheno</span><span class="si">}{</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">lineage_of_interest</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">addr_out_chip_gt</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_dir</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">input_TF_gene_chip</span><span class="si">}{</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">lineage_of_interest</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="n">rna_gp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_csv</span><span class="p">(</span><span class="n">addr_out_pvalue_gp</span><span class="p">,</span> <span class="n">delim</span><span class="p">)</span>
+            <span class="n">rna_gt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_csv</span><span class="p">(</span><span class="n">addr_out_pvalue_gt</span><span class="p">,</span> <span class="n">delim</span><span class="p">)</span>
+            <span class="n">chip_gt</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_csv</span><span class="p">(</span><span class="n">addr_out_chip_gt</span><span class="p">,</span> <span class="n">delim</span><span class="p">)</span>
+
+            <span class="c1"># load 1 file from Data folder</span>
+            <span class="n">addr_gene_pheno_all</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">in_dir_rna</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">input_gene_pheno_all</span><span class="p">)</span>
+            <span class="n">rna_gp_all</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_csv</span><span class="p">(</span><span class="n">addr_gene_pheno_all</span><span class="p">,</span> <span class="n">delim</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;File not found&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_print_shape</span><span class="p">(</span><span class="n">rna_gp_all</span><span class="p">,</span> <span class="n">rna_gp</span><span class="p">,</span> <span class="n">rna_gt</span><span class="p">,</span> <span class="n">chip_gt</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rna_gp_all</span><span class="p">,</span> <span class="n">rna_gp</span><span class="p">,</span> <span class="n">rna_gt</span><span class="p">,</span> <span class="n">chip_gt</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_print_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rna_gp_all</span><span class="p">,</span> <span class="n">rna_gp</span><span class="p">,</span> <span class="n">rna_gt</span><span class="p">,</span> <span class="n">chip_gt</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Displays the shapes of multiple loaded dataframes to validate their structure and size.</span>
+
+<span class="sd">        :param dataframes: Variable number of dataframes to display shapes for.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data_shapes</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;File loaded&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;rna gene-pheno ALL&quot;</span><span class="p">,</span> <span class="s2">&quot;rna gene-pheno interest&quot;</span><span class="p">,</span> <span class="s2">&quot;rna gene-tf&quot;</span><span class="p">,</span> <span class="s2">&quot;ChIP gene-tf&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;Shape&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">rna_gp_all</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">rna_gp</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">rna_gt</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">chip_gt</span><span class="o">.</span><span class="n">shape</span><span class="p">],</span>
+        <span class="p">}</span>
+
+        <span class="n">df_shapes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_shapes</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">df_shapes</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="PGMInputPreparer">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.PGMInputPreparer">[docs]</a>
+<span class="k">class</span> <span class="nc">PGMInputPreparer</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Prepares and processes input data for the probabilistic graphical model (PGM) as part of the InPheRNo-ChIP project. </span>
+<span class="sd">    This includes data masking, estimating parameters, and adding control variables to ensure robust model performance.</span>
+
+<span class="sd">    :param out_tmp_dir: Directory path for saving intermediate outputs.</span>
+<span class="sd">    :type out_tmp_dir: str</span>
+<span class="sd">    :param rna_tg: DataFrame containing RNA-seq gene-TF associations.</span>
+<span class="sd">    :type rna_tg: pandas.DataFrame</span>
+<span class="sd">    :param rna_gene_pheno: DataFrame containing gene-phenotype associations.</span>
+<span class="sd">    :type rna_gene_pheno: pandas.DataFrame</span>
+<span class="sd">    :param chip_tg: DataFrame containing ChIP-seq gene-TF associations.</span>
+<span class="sd">    :type chip_tg: pandas.DataFrame</span>
+<span class="sd">    :param rna_gene_pheno_all: DataFrame containing gene-phenotype associations for all genes.</span>
+<span class="sd">    :type rna_gene_pheno_all: pandas.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out_tmp_dir</span><span class="p">,</span> <span class="n">rna_tg</span><span class="p">,</span> <span class="n">rna_gene_pheno</span><span class="p">,</span> <span class="n">chip_tg</span><span class="p">,</span> <span class="n">rna_gene_pheno_all</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the PGMInputPreparer with directories and data for processing.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eps</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="o">.</span><span class="n">min</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_tmp_dir</span> <span class="o">=</span> <span class="n">out_tmp_dir</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rna_tg</span> <span class="o">=</span> <span class="n">rna_tg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rna_gene_pheno</span> <span class="o">=</span> <span class="n">rna_gene_pheno</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chip_tg</span> <span class="o">=</span> <span class="n">chip_tg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rna_gene_pheno_all</span> <span class="o">=</span> <span class="n">rna_gene_pheno_all</span>
+
+    <span class="k">def</span> <span class="nf">_mask_elasticNet_rlts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pvalue_TF_gene</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Masks the p-values from Elastic Net results to handle edge cases and improve numerical stability.</span>
+
+<span class="sd">        :param pvalue_TF_gene: DataFrame with p-values to be masked.</span>
+<span class="sd">        :type pvalue_TF_gene: pandas.DataFrame</span>
+<span class="sd">        :return: DataFrame with masked p-values.</span>
+<span class="sd">        :rtype: pandas.DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Cap the minimum p-values to avoid precision issues</span>
+        <span class="n">pvalue_TF_gene</span><span class="p">[(</span><span class="n">pvalue_TF_gene</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">pvalue_TF_gene</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span>
+        <span class="c1"># when the largest p-value is exactly 1, it faces distribution issues. We multiply it with a number very close to 1.</span>
+        <span class="n">pvalue_TF_gene</span> <span class="o">=</span> <span class="n">pvalue_TF_gene</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mf">1e-15</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+        <span class="c1"># mask to 1 if p-value is negative</span>
+        <span class="n">pvalue_TF_gene</span> <span class="o">=</span> <span class="n">pvalue_TF_gene</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.5</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pvalue_TF_gene</span>
+
+<div class="viewcode-block" id="PGMInputPreparer.beta_unif_gen">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.PGMInputPreparer.beta_unif_gen">[docs]</a>
+    <span class="k">class</span> <span class="nc">beta_unif_gen</span><span class="p">(</span><span class="n">rv_continuous</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">_pdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="n">b0</span><span class="p">,</span> <span class="n">c0</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">c0</span> <span class="o">*</span> <span class="p">(</span><span class="n">beta</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a0</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">b0</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c0</span><span class="p">)</span> <span class="o">*</span> <span class="n">uniform</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PGMInputPreparer.estimate_a_prime">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.PGMInputPreparer.estimate_a_prime">[docs]</a>
+    <span class="k">def</span> <span class="nf">estimate_a_prime</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Pj_arr</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Estimates the &#39;a_prime&#39; parameter for the PGM using a hybrid beta-uniform distribution.</span>
+
+<span class="sd">        :param Pj_arr: Array of p-values for estimating the distribution parameter.</span>
+<span class="sd">        :type Pj_arr: numpy.ndarray</span>
+<span class="sd">        :return: Estimated &#39;a_prime&#39; parameter.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">seterr</span><span class="p">(</span><span class="n">divide</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">invalid</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+        <span class="n">beta_unif_rv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta_unif_gen</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;beta_unif&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+        <span class="n">a_gp_tmp</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">beta_unif_rv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+            <span class="n">Pj_arr</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">fb0</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">floc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fscale</span><span class="o">=</span><span class="mi">1</span>
+        <span class="p">)</span>  <span class="c1"># fb0 or fc0 fixes b0 and c0, respectively</span>
+        <span class="k">if</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Refit if the mixture coefficient is improperly estimated</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a_prime (c&gt;1) estimated: </span><span class="si">{</span><span class="n">a_gp_tmp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">a_gp_tmp</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">beta</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Pj_arr</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">fb</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">floc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fscale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;newly estimated: </span><span class="si">{</span><span class="n">a_gp_tmp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">A_gene</span> <span class="o">=</span> <span class="n">a_gp_tmp</span>
+
+        <span class="k">return</span> <span class="n">A_gene</span></div>
+
+
+<div class="viewcode-block" id="PGMInputPreparer.check_modality_per_gene">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.PGMInputPreparer.check_modality_per_gene">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_modality_per_gene</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ensures that each gene meets specific criteria in both RNA-seq and ChIP-seq data for inclusion in the PGM.</span>
+
+<span class="sd">        :return: DataFrames filtered based on modality checks.</span>
+<span class="sd">        :rtype: tuple of pandas.DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Filter for genes with at least one TF having p-values &lt; 0.05 in rna_tg</span>
+        <span class="n">selected_genes_rna</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rna_tg</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">rna_tg</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">index</span>
+
+        <span class="c1"># Filter for genes in chip_tg with at least one TF having Distance_P_Value &lt; 0.05</span>
+        <span class="n">selected_genes_chip</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chip_tg</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">chip_tg</span><span class="p">[</span><span class="s2">&quot;Distance_P_Value&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+        <span class="c1"># Intersection of genes meeting criteria in both dataframes</span>
+        <span class="n">selected_genes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">selected_genes_rna</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">selected_genes_chip</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt;&gt; [modality check] # genes with at least one TF having p-values &lt; 0.05: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">selected_genes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Filter both dataframes using the selected_genes list</span>
+        <span class="n">filtered_rna_tg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rna_tg</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected_genes</span><span class="p">]</span>
+        <span class="n">filtered_chip_tg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chip_tg</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected_genes</span><span class="p">]</span>
+        <span class="n">filtered_rna_gp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rna_gene_pheno</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected_genes</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">filtered_rna_tg</span><span class="p">,</span> <span class="n">filtered_chip_tg</span><span class="p">,</span> <span class="n">filtered_rna_gp</span></div>
+
+
+    <span class="k">def</span> <span class="nf">_generate_controls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">gene</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Generates control transcription factors (TFs) for a given gene to facilitate proper model calibration. </span>
+<span class="sd">        This method adds three types of control entries: ref_PIE, ref_Q, and ref_PIE_Q.</span>
+<span class="sd">        </span>
+<span class="sd">        :param df: DataFrame containing the existing gene and TF associations along with their Pj values.</span>
+<span class="sd">        :type df: pandas.DataFrame</span>
+<span class="sd">        :param gene: Specific gene for which to generate control TFs.</span>
+<span class="sd">        :type gene: str</span>
+<span class="sd">        :return: A DataFrame that includes the original data along with newly added control entries for the specified gene.</span>
+<span class="sd">        :rtype: pandas.DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Filter the dataframe for the specific gene</span>
+        <span class="n">gene_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">gene</span><span class="p">]</span>
+
+        <span class="c1"># Calculate the minimum values</span>
+        <span class="n">min_pi_ij</span> <span class="o">=</span> <span class="n">gene_df</span><span class="p">[</span><span class="s2">&quot;pi_ij&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">min_Qij</span> <span class="o">=</span> <span class="n">gene_df</span><span class="p">[</span><span class="s2">&quot;Qij&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        
+        <span class="c1"># Common Pj value for the gene</span>
+        <span class="n">common_Pj</span> <span class="o">=</span> <span class="n">gene_df</span><span class="p">[</span><span class="s2">&quot;Pj&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># Creating the new rows for ref_TFs</span>
+        <span class="n">ref_PIE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="s2">&quot;Gene&quot;</span><span class="p">:</span> <span class="n">gene</span><span class="p">,</span>
+                    <span class="s2">&quot;TF&quot;</span><span class="p">:</span> <span class="s2">&quot;ref_PIE&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;pi_ij&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;Qij&quot;</span><span class="p">:</span> <span class="n">min_Qij</span><span class="p">,</span>
+                    <span class="s2">&quot;Pj&quot;</span><span class="p">:</span> <span class="n">common_Pj</span><span class="p">,</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">ref_Q</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">[{</span><span class="s2">&quot;Gene&quot;</span><span class="p">:</span> <span class="n">gene</span><span class="p">,</span> <span class="s2">&quot;TF&quot;</span><span class="p">:</span> <span class="s2">&quot;ref_Q&quot;</span><span class="p">,</span> <span class="s2">&quot;pi_ij&quot;</span><span class="p">:</span> <span class="n">min_pi_ij</span><span class="p">,</span> <span class="s2">&quot;Qij&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Pj&quot;</span><span class="p">:</span> <span class="n">common_Pj</span><span class="p">}]</span>
+        <span class="p">)</span>
+        <span class="n">ref_PIE_Q</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s2">&quot;Gene&quot;</span><span class="p">:</span> <span class="n">gene</span><span class="p">,</span> <span class="s2">&quot;TF&quot;</span><span class="p">:</span> <span class="s2">&quot;ref_PIE_Q&quot;</span><span class="p">,</span> <span class="s2">&quot;pi_ij&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Qij&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Pj&quot;</span><span class="p">:</span> <span class="n">common_Pj</span><span class="p">}])</span>
+
+        <span class="c1"># Append new rows to the original dataframe</span>
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gene_df</span><span class="p">,</span> <span class="n">ref_PIE</span><span class="p">,</span> <span class="n">ref_Q</span><span class="p">,</span> <span class="n">ref_PIE_Q</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="PGMInputPreparer.combine_and_add_controls">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.PGMInputPreparer.combine_and_add_controls">[docs]</a>
+    <span class="k">def</span> <span class="nf">combine_and_add_controls</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">flt_rna_tg</span><span class="p">,</span> <span class="n">flt_chip_tg</span><span class="p">,</span> <span class="n">flt_rna_gp</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Merges datasets and adds control entries to prepare for PGM analysis.</span>
+
+<span class="sd">        :param flt_rna_tg: Filtered RNA-seq gene-TF associations.</span>
+<span class="sd">        :type flt_rna_tg: pandas.DataFrame</span>
+<span class="sd">        :param flt_chip_tg: Filtered ChIP-seq gene-TF associations.</span>
+<span class="sd">        :type flt_chip_tg: pandas.DataFrame</span>
+<span class="sd">        :param flt_rna_gp: Filtered gene-phenotype associations.</span>
+<span class="sd">        :type flt_rna_gp: pandas.DataFrame</span>
+<span class="sd">        :return: Combined DataFrame with control entries added.</span>
+<span class="sd">        :rtype: pandas.DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">flt_rna_tg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mask_elasticNet_rlts</span><span class="p">(</span><span class="n">flt_rna_tg</span><span class="p">)</span>
+        <span class="n">flt_rna_tg</span> <span class="o">=</span> <span class="n">flt_rna_tg</span><span class="o">.</span><span class="n">stack</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="n">flt_rna_tg</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;TF&quot;</span><span class="p">,</span> <span class="s2">&quot;pi_ij&quot;</span><span class="p">]</span>
+
+        <span class="c1"># Clean up Qij (ChIP-seq data)</span>
+        <span class="n">flt_chip_tg</span> <span class="o">=</span> <span class="n">flt_chip_tg</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+        <span class="c1"># Calculate min-over-min</span>
+        <span class="n">min_over_min</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">flt_chip_tg</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;TF&quot;</span><span class="p">,</span> <span class="s2">&quot;Gene_ID&quot;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;lineage&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Distance_P_Value&quot;</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+        <span class="p">)</span>
+        <span class="n">min_over_min</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TF&quot;</span><span class="p">,</span> <span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;Qij&quot;</span><span class="p">]</span>
+
+        <span class="c1"># Clean up Pj (Gene-Phenotype data)</span>
+        <span class="n">flt_rna_gp</span> <span class="o">=</span> <span class="n">flt_rna_gp</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;index&quot;</span><span class="p">:</span> <span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;PValue&quot;</span><span class="p">:</span> <span class="s2">&quot;Pj&quot;</span><span class="p">})</span>
+        <span class="n">flt_rna_gp</span> <span class="o">=</span> <span class="n">flt_rna_gp</span><span class="p">[[</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;Pj&quot;</span><span class="p">]]</span>
+
+        <span class="c1"># Merge dfs, take intersection of genes</span>
+        <span class="n">result_df</span> <span class="o">=</span> <span class="n">flt_rna_tg</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">min_over_min</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;TF&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+        <span class="n">result_df</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">flt_rna_gp</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+
+        <span class="n">result_df</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">result_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">out_tmp_dir</span><span class="p">,</span> <span class="s2">&quot;in2pgm_woCtrl.csv&quot;</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Add controls</span>
+        <span class="n">unique_genes</span> <span class="o">=</span> <span class="n">result_df</span><span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &gt;&gt; Adding controls...&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">gene</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">unique_genes</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">gene</span> <span class="o">==</span> <span class="s2">&quot;ABCC8&quot;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &gt;&gt; ABCC8 is being processed...&quot;</span><span class="p">)</span>
+            <span class="n">gene_df_modified</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_generate_controls</span><span class="p">(</span><span class="n">result_df</span><span class="p">,</span> <span class="n">gene</span><span class="p">)</span>
+            <span class="n">final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">final</span><span class="p">,</span> <span class="n">gene_df_modified</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">final</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s2">&quot;first&quot;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;TF&quot;</span><span class="p">,</span> <span class="s2">&quot;pi_ij&quot;</span><span class="p">,</span> <span class="s2">&quot;Pj&quot;</span><span class="p">,</span> <span class="s2">&quot;Qij&quot;</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">final</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">,</span> <span class="s2">&quot;TF&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+</div>
+
+
+
+
+<div class="viewcode-block" id="CorePGM">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.CorePGM">[docs]</a>
+<span class="k">class</span> <span class="nc">CorePGM</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Manages and executes the probabilistic graphical model (PGM) for inferring gene regulatory networks in the InPheRNo-ChIP project.</span>
+
+<span class="sd">    This class sets up the PGM configurations, manages batch processing of genes, and handles the execution of the model for each gene.</span>
+
+<span class="sd">    :param in2pgm: Input data and configurations for setting up the PGM.</span>
+<span class="sd">    :type in2pgm: dict</span>
+<span class="sd">    :param pgm_param: Parameters to control the PGM execution, such as number of iterations and chains.</span>
+<span class="sd">    :type pgm_param: dict</span>
+<span class="sd">    :param Prior_T: Prior probability for the Bernoulli distribution of Tij.</span>
+<span class="sd">    :type Prior_T: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in2pgm</span><span class="p">,</span> <span class="n">pgm_param</span><span class="p">,</span> <span class="n">Prior_T</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the CorePGM with necessary parameters and input data.</span>
+
+<span class="sd">        :param in2pgm: Data and a_prime value for PGM setup.</span>
+<span class="sd">        :param pgm_param: Dictionary containing parameters for the PGM such as number of iterations and chains.</span>
+<span class="sd">        :param Prior_T: Prior probability for the Bernoulli distribution of transcription factors&#39; interactions.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">A_gene</span> <span class="o">=</span> <span class="n">in2pgm</span><span class="p">[</span><span class="s2">&quot;a_prime&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obs_all_genes</span> <span class="o">=</span> <span class="n">in2pgm</span><span class="p">[</span><span class="s2">&quot;obs&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_all_genes</span><span class="o">.</span><span class="n">Gene</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ls_tf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_all_genes</span><span class="o">.</span><span class="n">TF</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Prior_T</span> <span class="o">=</span> <span class="n">Prior_T</span>  <span class="c1"># should be 2/(num_true_tf), not including controls</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span> <span class="o">=</span> <span class="n">pgm_param</span>
+
+<div class="viewcode-block" id="CorePGM.logsumexp">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.CorePGM.logsumexp">[docs]</a>
+    <span class="k">def</span> <span class="nf">logsumexp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">logp1</span><span class="p">,</span> <span class="n">logp2</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>        
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Computes the log-sum-exp of two log probabilities for numerical stability.</span>
+
+<span class="sd">        :param logp1: Log probability 1.</span>
+<span class="sd">        :type logp1: float</span>
+<span class="sd">        :param logp2: Log probability 2.</span>
+<span class="sd">        :type logp2: float</span>
+<span class="sd">        :param r: Mixing ratio.</span>
+<span class="sd">        :type r: float</span>
+<span class="sd">        :return: Result of log-sum-exp calculation.</span>
+<span class="sd">        :rtype: float</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">max_logp</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">logp1</span><span class="p">,</span> <span class="n">logp2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">max_logp</span> <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">pt</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">logp1</span> <span class="o">-</span> <span class="n">max_logp</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">r</span><span class="p">)</span> <span class="o">*</span> <span class="n">pt</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">logp2</span> <span class="o">-</span> <span class="n">max_logp</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="CorePGM.setup_model">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.CorePGM.setup_model">[docs]</a>
+    <span class="k">def</span> <span class="nf">setup_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="n">n_lineages</span><span class="p">,</span> <span class="n">a_gp</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Configures the PGM model using the specified parameters and distributions.</span>
+
+<span class="sd">        :param n_TF: Number of transcription factors.</span>
+<span class="sd">        :type n_TF: int</span>
+<span class="sd">        :param n_lineages: Number of lineages or biological replicates.</span>
+<span class="sd">        :type n_lineages: int</span>
+<span class="sd">        :param a_gp: Estimated parameter &#39;a_prime&#39; for the Beta distribution in phenotype modeling.</span>
+<span class="sd">        :type a_gp: float</span>
+<span class="sd">        :return: Configured PGM model.</span>
+<span class="sd">        :rtype: pymc.Model</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">def</span> <span class="nf">phenotype_logp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">T_sum</span><span class="p">,</span> <span class="n">a_gp</span><span class="p">):</span>
+            <span class="n">h1_logp</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">logp</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">Beta</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">a_gp</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">value</span><span class="p">)</span>
+            <span class="n">h0_logp</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">logp</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">value</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pt</span><span class="o">.</span><span class="n">switch</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="n">T_sum</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">h0_logp</span><span class="p">,</span> <span class="n">h1_logp</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">rna_tg_logp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">r_tg</span><span class="p">,</span> <span class="n">a_tg1</span><span class="p">,</span> <span class="n">a_tg0</span><span class="p">):</span>
+            <span class="n">tg1_logp</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">logp</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">Beta</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">a_tg1</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">value</span><span class="p">)</span>
+            <span class="n">tg0_logp</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">logp</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">Beta</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">a_tg0</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">value</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pt</span><span class="o">.</span><span class="n">switch</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">tg1_logp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">logsumexp</span><span class="p">(</span><span class="n">tg1_logp</span><span class="p">,</span> <span class="n">tg0_logp</span><span class="p">,</span> <span class="n">r_tg</span><span class="p">))</span>
+
+        <span class="k">def</span> <span class="nf">chip_tg_logp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">r_tgp</span><span class="p">,</span> <span class="n">a_tgp1</span><span class="p">,</span> <span class="n">a_tgp0</span><span class="p">):</span>
+            <span class="n">tgp1_logp</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">logp</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">Beta</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">a_tgp1</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="n">n_lineages</span><span class="p">)),</span> <span class="n">value</span><span class="p">)</span>
+            <span class="n">tgp0_logp</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">logp</span><span class="p">(</span><span class="n">pm</span><span class="o">.</span><span class="n">Beta</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">a_tgp0</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="n">n_lineages</span><span class="p">)),</span> <span class="n">value</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">pt</span><span class="o">.</span><span class="n">switch</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">tgp1_logp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">logsumexp</span><span class="p">(</span><span class="n">tgp1_logp</span><span class="p">,</span> <span class="n">tgp0_logp</span><span class="p">,</span> <span class="n">r_tgp</span><span class="p">))</span>
+
+        <span class="c1"># p_T = float(Prior_T)</span>
+        <span class="k">with</span> <span class="n">pm</span><span class="o">.</span><span class="n">Model</span><span class="p">()</span> <span class="k">as</span> <span class="n">model</span><span class="p">:</span>
+            <span class="c1"># Define MutableData for observations</span>
+            <span class="n">obs_p_gene</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">MutableData</span><span class="p">(</span><span class="s2">&quot;obs_p_gene&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">obs_p_TF_gene</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">MutableData</span><span class="p">(</span><span class="s2">&quot;obs_p_TF_gene&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+            <span class="n">obs_chip_tg_both</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">MutableData</span><span class="p">(</span><span class="s2">&quot;obs_chip_tg_both&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="n">n_lineages</span><span class="p">)))</span>
+
+            <span class="c1"># Priors</span>
+            <span class="c1"># ---- GEx data ----</span>
+            <span class="c1"># sigma = pm.Uniform(&#39;sigma&#39;, 0, 1)</span>
+            <span class="c1"># BoundedNormal = pm.Bound(pm.Normal, lower=0.0, upper=1.0)</span>
+            <span class="c1"># a_tg = BoundedNormal(&#39;a_tg&#39;, mu=float(A_TF_gene_h1), sigma=1.0)#0.1*order_of_magnitude)  ##make sure sigma has the same order as mean</span>
+            <span class="n">a_tg1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">&quot;a_tg1&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">a_tg0</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">&quot;a_tg0&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">r_tg</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">&quot;r_tg&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="c1"># ---- chip-seq ----</span>
+            <span class="n">a_tgp1</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">&quot;a_tgp1&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">a_tgp0</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">&quot;a_tgp0&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">r_tgp</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Uniform</span><span class="p">(</span><span class="s2">&quot;r_tgp&quot;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+            <span class="c1"># ---- Tij ----</span>
+            <span class="c1"># Deterministic is used as an intermediate value (from PyMC library)  # np.sum(T, axis=0)&gt;0) sum up all rows, return: true/false</span>
+            <span class="c1"># Calculate the standard deviation</span>
+
+            <span class="n">upper</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_TF</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># ~15% of 22</span>
+            <span class="n">lower</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_TF</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># ~5% of 22</span>
+            <span class="n">mu</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Prior_T</span><span class="p">)</span>
+            <span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(((</span><span class="n">upper</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">mu</span> <span class="o">-</span> <span class="n">lower</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="c1"># The truncated normal has an additional normalization term so that it is a proper pdf and integrates to 1, the bounded does not.</span>
+            <span class="n">p_T</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">TruncatedNormal</span><span class="p">(</span><span class="s2">&quot;p_T&quot;</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mi">4</span><span class="o">/</span><span class="p">(</span><span class="n">n_TF</span><span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+            <span class="n">T</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Bernoulli</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">p_T</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+            <span class="n">T_sum</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">Deterministic</span><span class="p">(</span><span class="s2">&quot;T_sum&quot;</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+
+            <span class="c1"># [phenotype]</span>
+            <span class="n">p_gene</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">DensityDist</span><span class="p">(</span><span class="s2">&quot;p_gene&quot;</span><span class="p">,</span> <span class="n">T_sum</span><span class="p">,</span> <span class="n">a_gp</span><span class="p">,</span> <span class="n">logp</span><span class="o">=</span><span class="n">phenotype_logp</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="n">obs_p_gene</span><span class="p">)</span>
+
+            <span class="c1"># [GEx] pi_ij -- for elastic net</span>
+            <span class="n">p_TF_gene</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">DensityDist</span><span class="p">(</span><span class="s2">&quot;p_TF_gene&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">r_tg</span><span class="p">,</span> <span class="n">a_tg1</span><span class="p">,</span> <span class="n">a_tg0</span><span class="p">,</span> <span class="n">logp</span><span class="o">=</span><span class="n">rna_tg_logp</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="n">obs_p_TF_gene</span><span class="p">)</span>
+
+            <span class="c1"># [chip-seq] single peak, 2 lineages</span>
+            <span class="n">p_chip_tg</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">DensityDist</span><span class="p">(</span>
+                <span class="s2">&quot;p_chip_tg&quot;</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">r_tgp</span><span class="p">,</span> <span class="n">a_tgp1</span><span class="p">,</span> <span class="n">a_tgp0</span><span class="p">,</span> <span class="n">logp</span><span class="o">=</span><span class="n">chip_tg_logp</span><span class="p">,</span> <span class="n">observed</span><span class="o">=</span><span class="n">obs_chip_tg_both</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">model</span></div>
+
+    
+<div class="viewcode-block" id="CorePGM.run_model">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.CorePGM.run_model">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">one_gene</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Executes the PGM for a single gene based on the provided gene data and model parameters.</span>
+
+<span class="sd">        :param one_gene: Data for one gene including its interactions and expressions.</span>
+<span class="sd">        :type one_gene: pandas.DataFrame</span>
+<span class="sd">        :return: Trace of the model after sampling.</span>
+<span class="sd">        :rtype: pymc.backends.base.MultiTrace</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">a_gp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">A_gene</span><span class="p">)</span>
+        <span class="n">n_TF</span> <span class="o">=</span> <span class="n">one_gene</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># should be 22 + 3 controls</span>
+        <span class="n">n_lineages</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># 2</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">setup_model</span><span class="p">(</span><span class="n">n_TF</span><span class="p">,</span> <span class="n">n_lineages</span><span class="p">,</span> <span class="n">a_gp</span><span class="p">)</span>
+
+        <span class="c1"># Extract observations</span>
+        <span class="n">obs_p_gene</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">one_gene</span><span class="p">[</span><span class="s2">&quot;Pj&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="n">obs_rna_tg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">one_gene</span><span class="p">[</span><span class="s2">&quot;pi_ij&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+        <span class="c1"># Stacking to match shape (n_TF, n_lineages)</span>
+        <span class="n">obs_q_ij</span> <span class="o">=</span> <span class="n">one_gene</span><span class="p">[</span><span class="s2">&quot;Qij&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">obs_q_ij</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">obs_q_ij</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_TF</span><span class="p">,</span> <span class="n">n_lineages</span><span class="p">))</span>
+
+        <span class="n">pm</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;obs_p_gene&quot;</span><span class="p">:</span> <span class="n">obs_p_gene</span><span class="p">,</span>
+                <span class="s2">&quot;obs_p_TF_gene&quot;</span><span class="p">:</span> <span class="n">obs_rna_tg</span><span class="p">,</span>
+                <span class="s2">&quot;obs_chip_tg_both&quot;</span><span class="p">:</span> <span class="n">obs_q_ij</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">model</span><span class="p">:</span>
+            <span class="n">trace</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span>
+                <span class="n">draws</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;ni&quot;</span><span class="p">],</span>
+                <span class="n">chains</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;nc&quot;</span><span class="p">],</span>
+                <span class="n">tune</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;nt&quot;</span><span class="p">],</span>
+                <span class="n">random_seed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">],</span>
+                <span class="n">cores</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+                <span class="n">nuts</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;target_accept&quot;</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">},</span>
+                <span class="n">progressbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">return_inferencedata</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">trace</span></div>
+
+
+<div class="viewcode-block" id="CorePGM.run">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.CorePGM.run">[docs]</a>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">out_dir</span><span class="p">,</span> <span class="n">n_chain</span><span class="p">,</span> <span class="n">start_batch</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Processes genes in batches, executing the PGM for each batch and managing the output.</span>
+
+<span class="sd">        :param out_dir: Directory to save the output files.</span>
+<span class="sd">        :type out_dir: str</span>
+<span class="sd">        :param n_chain: Number of chains for MCMC sampling.</span>
+<span class="sd">        :type n_chain: int</span>
+<span class="sd">        :param start_batch: Starting index of the batch processing.</span>
+<span class="sd">        :type start_batch: int</span>
+<span class="sd">        :param batch_size: Number of genes processed in each batch.</span>
+<span class="sd">        :type batch_size: int</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">n_batches</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span><span class="p">)</span> <span class="o">//</span> <span class="n">batch_size</span> <span class="o">+</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span><span class="p">)</span> <span class="o">%</span> <span class="n">batch_size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">batch_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start_batch</span><span class="p">,</span> <span class="n">n_batches</span><span class="p">):</span>
+            <span class="c1"># Initialize traces and info_per_batch</span>
+            <span class="n">traces</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">info_per_batch</span> <span class="o">=</span> <span class="p">{}</span>
+            
+            <span class="c1"># Extract genes for this batch</span>
+            <span class="n">start_idx</span> <span class="o">=</span> <span class="n">batch_id</span> <span class="o">*</span> <span class="n">batch_size</span>
+            <span class="n">end_idx</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">start_idx</span> <span class="o">+</span> <span class="n">batch_size</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span><span class="p">))</span>
+            <span class="n">batch_genes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span><span class="p">[</span><span class="n">start_idx</span><span class="p">:</span><span class="n">end_idx</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt;&gt; Running batch </span><span class="si">{</span><span class="n">batch_id</span><span class="si">}</span><span class="s2"> with </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">batch_genes</span><span class="p">)</span><span class="si">}</span><span class="s2"> genes...&quot;</span><span class="p">)</span>
+            
+            <span class="k">for</span> <span class="n">gene</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">batch_genes</span><span class="p">):</span>
+                <span class="n">RANDOM_SEED</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_chain</span><span class="p">)</span> <span class="o">*</span> <span class="mi">12345</span> <span class="o">+</span> <span class="n">DEFAULT_SEED</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">RANDOM_SEED</span>  <span class="c1"># the seed is gene-specific</span>
+
+                <span class="n">info_per_batch</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">obs_all_genes</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">obs_all_genes</span><span class="p">[</span><span class="s2">&quot;Gene&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">gene</span><span class="p">]</span>
+                <span class="n">traces</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">run_model</span><span class="p">(</span><span class="n">info_per_batch</span><span class="p">[</span><span class="n">gene</span><span class="p">])</span>
+
+            <span class="c1"># Save traces to pickle file</span>
+            <span class="n">model_fpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="n">out_dir</span><span class="p">,</span>
+                <span class="s2">&quot;RnCnP_vary-Tp</span><span class="si">%s</span><span class="s2">_nc</span><span class="si">%s</span><span class="s2">_ni</span><span class="si">%i</span><span class="s2">_nt</span><span class="si">%s</span><span class="s2">_noburn_batch</span><span class="si">%s</span><span class="s2">.pkl&quot;</span>
+                <span class="o">%</span> <span class="p">(</span>
+                    <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">Prior_T</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;nc&quot;</span><span class="p">],</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;ni&quot;</span><span class="p">],</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">pgm_param</span><span class="p">[</span><span class="s2">&quot;nt&quot;</span><span class="p">],</span>
+                    <span class="n">batch_id</span><span class="p">,</span>
+                <span class="p">),</span>
+            <span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">model_fpath</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+                <span class="n">cloudpickle</span><span class="o">.</span><span class="n">dump</span><span class="p">({</span><span class="s2">&quot;trace&quot;</span><span class="p">:</span> <span class="n">traces</span><span class="p">,</span> <span class="s2">&quot;info_per_batch&quot;</span><span class="p">:</span> <span class="n">info_per_batch</span><span class="p">},</span> <span class="n">fp</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt;&gt; Saved batch </span><span class="si">{</span><span class="n">batch_id</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">model_fpath</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="c1"># Clear traces for the next batch</span>
+            <span class="n">traces</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="kc">None</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="step2_main">
+<a class="viewcode-back" href="../usage.html#InPheC_Step2.step2_main">[docs]</a>
+<span class="k">def</span> <span class="nf">step2_main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Entry point for executing the step 2 of the InPheRNo-ChIP project&#39;s pipeline. This function orchestrates</span>
+<span class="sd">    the loading of data, preprocessing, and execution of the probabilistic graphical model (PGM) for gene</span>
+<span class="sd">    regulatory network (GRN) inference.</span>
+
+<span class="sd">    Steps:</span>
+<span class="sd">    - Parses command-line arguments for configuration settings.</span>
+<span class="sd">    - Loads data produced by step 1, including gene-TF and gene-phenotype associations.</span>
+<span class="sd">    - Prepares input for the PGM, including data cleaning, modality checks, and control integration.</span>
+<span class="sd">    - Configures and runs the PGM to infer regulatory networks.</span>
+
+<span class="sd">    The function manages file directories, initializes data preparation, sets PGM parameters, and</span>
+<span class="sd">    handles the batch processing of genes, ensuring all outputs are appropriately saved and managed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">in2pgm</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># Dictionary to store inputs required for PGM setup</span>
+
+    <span class="c1"># Parse arguments</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">Step2ArgumentParser</span><span class="p">()</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">get_args</span><span class="p">()</span>  <span class="c1"># Retrieve command-line arguments</span>
+
+    <span class="c1"># Load data from the output of step 1</span>
+    <span class="n">data_loader</span> <span class="o">=</span> <span class="n">Step1DataLoader</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">rna_gp_all</span><span class="p">,</span> <span class="n">rna_gp</span><span class="p">,</span> <span class="n">rna_gt</span><span class="p">,</span> <span class="n">chip_gt</span> <span class="o">=</span> <span class="n">data_loader</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+
+    <span class="c1"># Prepare input for PGM</span>
+    <span class="n">tmp_out_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">,</span> <span class="s2">&quot;tmp&quot;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">tmp_out_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># save intermediate file</span>
+    
+    <span class="c1"># Initialize data preparer and estimate a_prime from the data</span>
+    <span class="n">preparer</span> <span class="o">=</span> <span class="n">PGMInputPreparer</span><span class="p">(</span><span class="n">tmp_out_dir</span><span class="p">,</span> <span class="n">rna_gt</span><span class="p">,</span> <span class="n">rna_gp</span><span class="p">,</span> <span class="n">chip_gt</span><span class="p">,</span> <span class="n">rna_gp_all</span><span class="p">)</span>
+    <span class="n">in2pgm</span><span class="p">[</span><span class="s2">&quot;a_prime&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">preparer</span><span class="o">.</span><span class="n">estimate_a_prime</span><span class="p">(</span><span class="n">rna_gp_all</span><span class="p">)</span>
+
+    <span class="c1"># Perform modality checks and prepare the data for PGM input</span>
+    <span class="c1">## e.g., 1.4k genes (from step 1) --&gt; 1.2k genes after modality check</span>
+    <span class="n">flt_rna_tg</span><span class="p">,</span> <span class="n">flt_chip_tg</span><span class="p">,</span> <span class="n">flt_rna_gp</span> <span class="o">=</span> <span class="n">preparer</span><span class="o">.</span><span class="n">check_modality_per_gene</span><span class="p">()</span>
+
+    <span class="c1"># Combine and add controls</span>
+    <span class="n">in2pgm</span><span class="p">[</span><span class="s2">&quot;obs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">preparer</span><span class="o">.</span><span class="n">combine_and_add_controls</span><span class="p">(</span>
+        <span class="n">flt_rna_tg</span><span class="p">,</span> <span class="n">flt_chip_tg</span><span class="p">,</span> <span class="n">flt_rna_gp</span>
+    <span class="p">)</span>  
+    
+    <span class="c1"># Set parameters for the PGM execution</span>
+    <span class="n">pgm_param</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ni&quot;</span><span class="p">:</span> <span class="n">args</span><span class="o">.</span><span class="n">n_iteration</span><span class="p">,</span> <span class="s2">&quot;nc&quot;</span><span class="p">:</span> <span class="n">args</span><span class="o">.</span><span class="n">n_chain</span><span class="p">,</span> <span class="s2">&quot;nt&quot;</span><span class="p">:</span> <span class="n">args</span><span class="o">.</span><span class="n">n_tune</span><span class="p">}</span>
+
+    <span class="c1"># Initialize and run the PGM</span>
+    <span class="n">pgm</span> <span class="o">=</span> <span class="n">CorePGM</span><span class="p">(</span><span class="n">in2pgm</span><span class="p">,</span> <span class="n">pgm_param</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">Prior_T</span><span class="p">)</span>
+    <span class="n">pgm</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">n_chain</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">start_batch</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">batch_size</span><span class="p">)</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">print_logo</span><span class="p">(</span><span class="s2">&quot;Running step 2&quot;</span><span class="p">)</span>
+    <span class="n">step2_main</span><span class="p">()</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2024, Chen Su, Amin Emad.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

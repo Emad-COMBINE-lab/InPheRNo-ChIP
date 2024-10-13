@@ -1,0 +1,960 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InPheC_Step1 &#8212; InPheRNo-ChIP 1.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script src="../_static/documentation_options.js?v=56dcb7b8"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/InPheC_Step1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">InPheRNo-ChIP 1.1 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Usage Guide
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../introduction.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../installation.html">
+                        Installation Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Usage Guide
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">InPheC_Step1</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for InPheC_Step1</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This script is part of the InPheRNo-ChIP project and is responsible for process and analyze RNA-seq and ChIP-seq data. </span>
+<span class="sd">It includes functionality for:</span>
+
+<span class="sd">    - Parsing command-line arguments to configure paths and options for data processing.</span>
+<span class="sd">    - Loading ChIP-seq and RNA-seq data from specified directories: ./Data/</span>
+<span class="sd">    - Processing and filtering data to ensure consistency among gene and TF sets.</span>
+<span class="sd">    - Performing Elastic Net regression on gene and TF expression data.</span>
+
+<span class="sd">Usage:</span>
+
+<span class="sd">    - Run the script from the command line, providing necessary arguments for input and output directories, file names, and analysis parameters. </span>
+<span class="sd">    - For detailed argument options, use the help option: `python InPheC_Step1.py --help`</span>
+
+<span class="sd">Note: Ensure that all dependencies are installed and the Python environment is correctly set up for running this script.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">ss</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">sklearn.exceptions</span> <span class="kn">import</span> <span class="n">ConvergenceWarning</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">ElasticNetCV</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">from</span> <span class="nn">utils_logo</span> <span class="kn">import</span> <span class="n">print_logo</span>
+
+
+<div class="viewcode-block" id="Step1ArgumentParser">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.Step1ArgumentParser">[docs]</a>
+<span class="k">class</span> <span class="nc">Step1ArgumentParser</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handles command-line arguments for the InPheRNo-ChIP project, setting up and parsing them.</span>
+<span class="sd">    </span>
+<span class="sd">    :param argparse.ArgumentParser parser: Configures the command-line arguments.</span>
+<span class="sd">    :param argparse.Namespace args: Stores the values of parsed arguments.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initializes the ArgumentParser with a description of the script&#39;s purpose and setups the arguments.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+            <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Configure paths and options for RNA-seq and ChIP-seq data processing.&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_add_arguments</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_add_arguments</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds command-line options for the script, specifying directories, files, and other parameters</span>
+<span class="sd">        required for processing RNA-seq and ChIP-seq data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Directories</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-id_r&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--in_dir_rna&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;./Data/RNA_seq&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Path to GEx data directory.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-id_c&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--in_dir_chip&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;./Data/ChIP_GSE61475_G&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Path to ChIP-seq data directory.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-od&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--out_dir&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;./step1/&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Path to output directory for step 1.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Input Files</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-it&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--input_tf_addr&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;./Data/mapped_hmtfs_legittfs-HumantfDB.csv&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;CSV file containing list of tfs.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-ie&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--input_expression&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;RNAseq_expr_sample_gse981-gse361-gse371_voom-zScore.csv&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;CSV file with gene and tf expression data.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-igp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--input_gene_phenotype_interest&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;RNAseq_pval_gene-phenotype_gse361-gse981-gse371_logFC2_FDR0.01.csv&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;CSV file with p-values of gene-phenotype.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Options and Parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-loi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--lineage_of_interest&quot;</span><span class="p">,</span>
+            <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;+&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;h64&quot;</span><span class="p">,</span> <span class="s2">&quot;dEN&quot;</span><span class="p">],</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Prefix for lineages of interest in ChIP-seq filenames.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-cpoi&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--chip_pvalue_of_interest&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;Distance_P_Value&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;P-value of interest, this corresponds to the t-Gene output column names.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-num_coefs&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--max_num_coefs&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">22</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;maximum number of TFs to be selected by Elastic Net, </span><span class="se">\</span>
+<span class="s2">                we set to 22 bc all 22 TFs are relevant to the differential process. </span><span class="se">\</span>
+<span class="s2">                This number allows the model to consider all TFs while still guarding against overfitting, </span><span class="se">\</span>
+<span class="s2">                given the sample size of 28&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># Output Files</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-ogp&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--output_gene_phenotype&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;RNAseq_pval_gene-pheno_intersect_chip_&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Output file with gene-phenotype p-values.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-tgt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--output_gene_tf&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;RNAseq_pval_gene-tf_intersect_chip_&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Output file with gene-tf p-values.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;-tgpk&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;--output_chip_tf_gene_peaks&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;ChIPseq_pval_gene-tf_minQ_&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Output file prefix with ChIP-seq cleaned data, which contains the minimum p-value across peaks for each lineage&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<div class="viewcode-block" id="Step1ArgumentParser.parse_args">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.Step1ArgumentParser.parse_args">[docs]</a>
+    <span class="k">def</span> <span class="nf">parse_args</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Parses the command-line arguments.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="DataLoader">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.DataLoader">[docs]</a>
+<span class="k">class</span> <span class="nc">DataLoader</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Loads and prepares RNA-seq and ChIP-seq data from specified directories.</span>
+
+<span class="sd">    :param chip_seq_dir: Path to the ChIP-seq data directory.</span>
+<span class="sd">    :type chip_seq_dir: str</span>
+<span class="sd">    :param rna_seq_dir: Path to the RNA-seq data directory.</span>
+<span class="sd">    :type rna_seq_dir: str</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chip_seq_dir</span><span class="p">,</span> <span class="n">rna_seq_dir</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the DataLoader with specified directories for ChIP-seq and RNA-seq data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chip_seq_dir</span> <span class="o">=</span> <span class="n">chip_seq_dir</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rna_seq_dir</span> <span class="o">=</span> <span class="n">rna_seq_dir</span>
+
+<div class="viewcode-block" id="DataLoader.load_chip_data">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.DataLoader.load_chip_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_chip_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lineage_of_interest</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads and merges ChIP-seq data files for specified lineages.</span>
+
+<span class="sd">        :param lineage_of_interest: Lineages to include in the analysis.</span>
+<span class="sd">        :type lineage_of_interest: list</span>
+<span class="sd">        :return: Combined DataFrame of ChIP-seq data across specified lineages.</span>
+<span class="sd">        :rtype: pandas.DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">combined_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">lineage</span> <span class="ow">in</span> <span class="n">lineage_of_interest</span><span class="p">:</span>
+            <span class="n">file_nms</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chip_seq_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lineage</span><span class="si">}</span><span class="s2">*.bed.tsv&quot;</span><span class="p">)))</span>
+            <span class="k">for</span> <span class="n">file_nm</span> <span class="ow">in</span> <span class="n">file_nms</span><span class="p">:</span>
+                <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_nm</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">df</span><span class="p">[</span><span class="s2">&quot;lineage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lineage</span>
+                <span class="n">tf_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_nm</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Extracting TF name (second element after split)</span>
+                <span class="n">df</span><span class="p">[</span><span class="s2">&quot;TF&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tf_name</span>
+                <span class="n">combined_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">combined_df</span><span class="p">,</span> <span class="n">df</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">combined_df</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.load_rna_data">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.DataLoader.load_rna_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_rna_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f_exp</span><span class="p">,</span> <span class="n">f_gp</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads RNA-seq expression data and associated gene-phenotype p-values from specified files.</span>
+
+<span class="sd">        :param f_exp: Filename of the RNA-seq expression data file.</span>
+<span class="sd">        :type f_exp: str</span>
+<span class="sd">        :param f_gp: Filename of the gene-phenotype p-values data file.</span>
+<span class="sd">        :type f_gp: str</span>
+<span class="sd">        :return: Tuple containing expression data and gene-phenotype p-values.</span>
+<span class="sd">        :rtype: (pandas.DataFrame, pandas.DataFrame)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">expr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rna_seq_dir</span><span class="p">,</span> <span class="n">f_exp</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span> <span class="k">if</span> <span class="n">f_exp</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="n">gene_pheno_pval</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rna_seq_dir</span><span class="p">,</span> <span class="n">f_gp</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span> <span class="k">if</span> <span class="n">f_gp</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">expr</span><span class="p">,</span> <span class="n">gene_pheno_pval</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.load_tf_list">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.DataLoader.load_tf_list">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_tf_list</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f_tf</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads a list of transcription factors from a specified CSV file.</span>
+
+<span class="sd">        :param f_tf: Path to the CSV file containing the list of transcription factors.</span>
+<span class="sd">        :type f_tf: str</span>
+<span class="sd">        :return: DataFrame containing the list of transcription factors.</span>
+<span class="sd">        :rtype: pandas.DataFrame</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tf_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">f_tf</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tf_list</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="DataProcessor">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.DataProcessor">[docs]</a>
+<span class="k">class</span> <span class="nc">DataProcessor</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Processes and filters RNA-seq and ChIP-seq data to ensure consistency among gene and TF sets.</span>
+<span class="sd">    This class is crucial for preparing the data for subsequent analysis, including filtering based on shared genes and TFs.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chip_data</span><span class="p">,</span> <span class="n">GEx_gene_tf</span><span class="p">,</span> <span class="n">gene_phenotype</span><span class="p">,</span> <span class="n">hm_tf_df</span><span class="p">,</span> <span class="n">chip_pvalue_of_interest</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the DataProcessor with various data sources for processing.</span>
+
+<span class="sd">        :param chip_data: ChIP-seq data as a pandas DataFrame.</span>
+<span class="sd">        :type chip_data: pandas.DataFrame</span>
+<span class="sd">        :param GEx_gene_tf: Gene and TF expression data as a pandas DataFrame.</span>
+<span class="sd">        :type GEx_gene_tf: pandas.DataFrame</span>
+<span class="sd">        :param gene_phenotype: Gene-phenotype data as a pandas DataFrame.</span>
+<span class="sd">        :type gene_phenotype: pandas.DataFrame</span>
+<span class="sd">        :param hm_tf_df: Human transcription factors data as a pandas DataFrame.</span>
+<span class="sd">        :type hm_tf_df: pandas.DataFrame</span>
+<span class="sd">        :param chip_pval_flag: Column name in ChIP-seq data for the p-value of interest.</span>
+<span class="sd">        :type chip_pval_flag: str</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chip_data</span> <span class="o">=</span> <span class="n">chip_data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">GEx_gene_tf</span> <span class="o">=</span> <span class="n">GEx_gene_tf</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gene_phenotype</span> <span class="o">=</span> <span class="n">gene_phenotype</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hm_tf_list</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">hm_tf_df</span><span class="o">.</span><span class="n">Symbol</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gex_genes_tfs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">GEx_gene_tf</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chip_pval_flag</span> <span class="o">=</span> <span class="n">chip_pvalue_of_interest</span>
+
+    <span class="k">def</span> <span class="nf">_find_common_genes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># for DE genes, ChIP genes, and GEx genes</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Identifies common genes across RNA-seq and ChIP-seq datasets.</span>
+
+<span class="sd">        :return: A set of gene IDs common across all datasets.</span>
+<span class="sd">        :rtype: set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">chip_genes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chip_data</span><span class="p">[</span><span class="s2">&quot;Gene_ID&quot;</span><span class="p">])</span>  <span class="c1"># 14982 genes</span>
+        <span class="n">de_genes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gene_phenotype</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>  <span class="c1"># 1745 DE genes</span>
+        <span class="n">intersect</span> <span class="o">=</span> <span class="n">chip_genes</span> <span class="o">&amp;</span> <span class="n">de_genes</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">gex_genes_tfs</span>  <span class="c1"># 1624 DE-ChIP-voom genes</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot; &gt;&gt; Originally, # DE genes: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">de_genes</span><span class="p">)</span><span class="si">}</span><span class="s2">, # ChIP genes: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">chip_genes</span><span class="p">)</span><span class="si">}</span><span class="s2">, # GEx genes: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gex_genes_tfs</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt;&gt; after intersection, # DE-ChIP genes: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">intersect</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">intersect</span>
+
+    <span class="k">def</span> <span class="nf">_find_common_tfs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Identifies common transcription factors across RNA-seq and ChIP-seq datasets.</span>
+
+<span class="sd">        :return: A set of TF identifiers common to all datasets.</span>
+<span class="sd">        :rtype: set</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">chip_tfs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chip_data</span><span class="p">[</span><span class="s2">&quot;TF&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">chip_tfs</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">hm_tf_list</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">gex_genes_tfs</span>
+
+<div class="viewcode-block" id="DataProcessor.filter_data">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.DataProcessor.filter_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">filter_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filters RNA-seq and ChIP-seq data to ensure consistency among gene and transcription factor (TF) sets,</span>
+<span class="sd">        and prepares the data for subsequent analysis steps. This method processes the data by:</span>
+<span class="sd">        - Identifying common genes and TFs across different datasets.</span>
+<span class="sd">        - Filtering ChIP-seq data to keep rows that have genes and TFs present in both lineages.</span>
+<span class="sd">        - Filtering to keep the minimal p-value across peaks for each (TF, gene, lineage) combination.</span>
+<span class="sd">        - Preparing expression data matrices for genes and TFs for Elastic Net regression.</span>
+
+<span class="sd">        :return: A tuple containing:</span>
+<span class="sd">            - pandas.DataFrame: Filtered ChIP-seq data with minimal p-values across peaks, reset index.</span>
+<span class="sd">            - pandas.DataFrame: Gene expression data for shared genes.</span>
+<span class="sd">            - pandas.DataFrame: TF expression data for shared TFs.</span>
+<span class="sd">            - pandas.DataFrame: Gene-phenotype data for shared genes.</span>
+<span class="sd">        :rtype: tuple</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">shared_genes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_common_genes</span><span class="p">()</span>  <span class="c1"># 1624 DE-ChIP-Pheno genes</span>
+        <span class="n">shared_tfs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_common_tfs</span><span class="p">()</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Now filtering ChIP-seq data..&quot;</span><span class="p">)</span>
+        <span class="c1"># filter 1: filter chip to keep rows that have gene on both lineages</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chip_data</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">chip_data</span><span class="p">[</span><span class="s2">&quot;Gene_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">shared_genes</span><span class="p">)</span> <span class="o">&amp;</span> <span class="bp">self</span><span class="o">.</span><span class="n">chip_data</span><span class="p">[</span><span class="s2">&quot;TF&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">shared_tfs</span><span class="p">)]</span>
+        <span class="c1"># filter 2: filter chip to keep rows that have TF on both lineages</span>
+        <span class="n">filtered_chip</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Gene_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;TF&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">&quot;lineage&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span>
+        <span class="p">)</span>  <span class="c1"># 1405 DE-ChIP-voom genes</span>
+
+        <span class="c1"># filter 3: filter chip to keep (TF, gene, lineage) with lowest p-value across PEAKS</span>
+        <span class="n">filtered_chip_lowest_pval_across_peaks</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">filtered_chip</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chip_pval_flag</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;TF&quot;</span><span class="p">,</span> <span class="s2">&quot;Gene_ID&quot;</span><span class="p">,</span> <span class="s2">&quot;lineage&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">chip_genes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">filtered_chip_lowest_pval_across_peaks</span><span class="p">[</span><span class="s2">&quot;Gene_ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+        <span class="n">chip_tfs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">filtered_chip_lowest_pval_across_peaks</span><span class="p">[</span><span class="s2">&quot;TF&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+
+        <span class="c1"># [GEX data] split to gene and tf expression, prepare for Elastic Net</span>
+        <span class="n">expr_gene</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GEx_gene_tf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">chip_genes</span><span class="p">)]</span>  <span class="c1"># (1405, 28)</span>
+        <span class="n">expr_tf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">GEx_gene_tf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">chip_tfs</span><span class="p">)]</span>  <span class="c1"># (22, 28)</span>
+        <span class="n">filtered_gp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gene_phenotype</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">chip_genes</span><span class="p">)]</span>  <span class="c1"># (1405, 5)</span>
+
+        <span class="c1"># find shared genes and tfs after filtering</span>
+        <span class="n">refined_shared_genes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">expr_gene</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">chip_genes</span><span class="p">)</span>
+        <span class="n">refined_shared_tfs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">expr_tf</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">chip_tfs</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt;&gt; (refined) # shared genes in ChIP-seq, DE, and GEx: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">refined_shared_genes</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; &gt;&gt; (refined) # shared TFs in ChIP-seq, DE, and GEx: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">refined_shared_tfs</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="c1"># assert</span>
+        <span class="k">assert</span> <span class="n">expr_gene</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">chip_genes</span><span class="p">),</span> <span class="s2">&quot;Number of genes in expr_gene does not match chip_genes&quot;</span>
+        <span class="k">assert</span> <span class="n">expr_tf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">chip_tfs</span><span class="p">),</span> <span class="s2">&quot;Number of genes in expr_tf does not match chip_tfs&quot;</span>
+
+        <span class="k">return</span> <span class="n">filtered_chip_lowest_pval_across_peaks</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">expr_gene</span><span class="p">,</span> <span class="n">expr_tf</span><span class="p">,</span> <span class="n">filtered_gp</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="ElasticNetProcessor">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.ElasticNetProcessor">[docs]</a>
+<span class="k">class</span> <span class="nc">ElasticNetProcessor</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Conducts Elastic Net regression to identify relationships between gene expressions and transcription factors</span>
+<span class="sd">    within the InPheRNo-ChIP project. It dynamically adjusts model parameters to optimize fit and manage convergence.</span>
+
+<span class="sd">    :param expr_gene: DataFrame containing gene expression data.</span>
+<span class="sd">    :type expr_gene: pandas.DataFrame</span>
+<span class="sd">    :param expr_tf: DataFrame containing TF expression data.</span>
+<span class="sd">    :type expr_tf: pandas.DataFrame</span>
+<span class="sd">    :param max_num_coefs: Maximum allowed non-zero coefficients in the model, provides a control over model complexity.</span>
+<span class="sd">    :type max_num_coefs: int, optional</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr_gene</span><span class="p">,</span> <span class="n">expr_tf</span><span class="p">,</span> <span class="n">max_num_coefs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the processor with gene and TF expression data sets, and sets up the Elastic Net model parameters.</span>
+
+<span class="sd">        :param expr_gene: Gene expression data as a pandas DataFrame.</span>
+<span class="sd">        :param expr_tf: TF expression data as a pandas DataFrame.</span>
+<span class="sd">        :param max_num_coefs: Optional; sets a cap on the number of non-zero coefficients to prevent overfitting.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">expr_gene</span> <span class="o">=</span> <span class="n">expr_gene</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">expr_tf</span> <span class="o">=</span> <span class="n">expr_tf</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">l1_rat</span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eps</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="o">.</span><span class="n">min</span>  <span class="c1"># 3e-308</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span> <span class="o">=</span> <span class="n">max_num_coefs</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">expr_gene</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ls_tfs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">expr_tf</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;max_num_coefs must be specified&quot;</span>
+
+<div class="viewcode-block" id="ElasticNetProcessor.perform_elastic_net">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.ElasticNetProcessor.perform_elastic_net">[docs]</a>
+    <span class="k">def</span> <span class="nf">perform_elastic_net</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">        Performs Elastic Net regression across all genes, using transcription factor expressions to predict gene activity.</span>
+
+<span class="sd">        :return: DataFrame with p-values indicating the significance of associations between genes and TFs.</span>
+<span class="sd">        :rtype: pandas.DataFrame</span>
+
+<span class="sd">        :note: This function is adapted from the InPheRNo paper with updated eps and n_alphas values to improve model performance and stability.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Performing Elastic Net regression on gene and TF expression data..&quot;</span><span class="p">)</span>
+        <span class="n">X_features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">expr_tf</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">pvalue_gt_array</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_tfs</span><span class="p">)))</span>
+        <span class="n">convergence_issues</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">gene</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span><span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pvalue_gene_tf: </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">(</span><span class="n">record</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">w</span><span class="p">:</span>
+                <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;always&quot;</span><span class="p">,</span> <span class="n">ConvergenceWarning</span><span class="p">)</span>
+
+                <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">expr_gene</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+                <span class="n">EN_model</span> <span class="o">=</span> <span class="n">ElasticNetCV</span><span class="p">(</span><span class="n">l1_ratio</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">l1_rat</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">100000</span><span class="p">)</span>
+
+                <span class="c1">#### make sure that number of nonzero coefs do not exceed max_num_coefs</span>
+                <span class="n">alphas1</span><span class="p">,</span> <span class="n">coefs1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">EN_model</span><span class="o">.</span><span class="n">path</span><span class="p">(</span>
+                    <span class="n">X_features</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">n_alphas</span><span class="o">=</span><span class="mi">10000</span>
+                <span class="p">)</span>  <span class="c1"># this setting gives # non-zero coefs closed to 22.</span>
+                <span class="n">num_coefs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">coefs1</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="c1"># print(num_coefs)</span>
+                <span class="c1"># print(num_coefs[num_coefs &lt;= max_num_coefs][-1])</span>
+                <span class="n">rep_EN</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">if</span> <span class="n">num_coefs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span><span class="p">:</span>
+                    <span class="n">EN_coef</span> <span class="o">=</span> <span class="n">coefs1</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">selected_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_tfs</span><span class="p">)))[</span><span class="n">EN_coef</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">while</span> <span class="p">(</span>
+                        <span class="p">(</span><span class="n">num_coefs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">num_coefs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                        <span class="ow">and</span> <span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">num_coefs</span><span class="p">[</span><span class="n">num_coefs</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span><span class="p">])</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span><span class="p">)</span>
+                        <span class="ow">and</span> <span class="p">(</span><span class="n">rep_EN</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span>
+                    <span class="p">):</span>
+                        <span class="n">rep_EN</span> <span class="o">+=</span> <span class="mi">1</span>
+                        <span class="n">alpha_min</span> <span class="o">=</span> <span class="n">alphas1</span><span class="p">[(</span><span class="n">num_coefs</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span><span class="p">)][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                        <span class="n">alpha_max</span> <span class="o">=</span> <span class="n">alphas1</span><span class="p">[(</span><span class="n">num_coefs</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+                        <span class="n">alphas3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">alpha_min</span><span class="p">,</span> <span class="n">alpha_max</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+                        <span class="n">alphas1</span><span class="p">,</span> <span class="n">coefs1</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">EN_model</span><span class="o">.</span><span class="n">path</span><span class="p">(</span><span class="n">X_features</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alphas</span><span class="o">=</span><span class="n">alphas3</span><span class="p">)</span>
+                        <span class="n">num_coefs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">coefs1</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+                        <span class="c1"># print(num_coefs)</span>
+                        <span class="c1"># print(num_coefs[num_coefs &lt;= max_num_coefs][-1])</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;repeat&quot;</span><span class="p">,</span> <span class="n">rep_EN</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">num_coefs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">num_coefs</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                        <span class="n">EN_coef</span> <span class="o">=</span> <span class="n">coefs1</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+                        <span class="n">selected_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_tfs</span><span class="p">)))[</span><span class="n">EN_coef</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">EN_coef</span> <span class="o">=</span> <span class="n">coefs1</span><span class="p">[:,</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_coefs</span><span class="p">[</span><span class="n">num_coefs</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_num_coefs</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+                        <span class="n">selected_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_tfs</span><span class="p">)))[</span><span class="n">EN_coef</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+
+                <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">selected_ind</span><span class="p">))</span>
+                <span class="c1"># n_selected_tf = len(selected_ind)</span>
+                <span class="n">X_features_new</span> <span class="o">=</span> <span class="n">X_features</span><span class="p">[:,</span> <span class="n">selected_ind</span><span class="p">]</span>
+
+                <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">X_features_new</span><span class="p">)</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+                <span class="n">ts_b</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">tvalues</span>
+                <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">category</span> <span class="o">==</span> <span class="n">ConvergenceWarning</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">w</span><span class="p">):</span>
+                    <span class="n">convergence_issues</span><span class="p">[</span><span class="n">gene</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Set to 1 to indicate a warning for this gene</span>
+
+            <span class="c1">#####prcise estimation of p-vals</span>
+            <span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">X_features</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># degrees of freedom in ttest for regression</span>
+            <span class="n">pvals_precise</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">x1_bar</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># mean of the first distribution</span>
+            <span class="n">n1</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>  <span class="c1"># num obs first distribution</span>
+            <span class="n">n2</span> <span class="o">=</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">n1</span>  <span class="c1"># num obs second distribution</span>
+            <span class="n">x2_std</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">t_precise</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ts_b</span><span class="p">)):</span>
+                <span class="n">T</span> <span class="o">=</span> <span class="n">ts_b</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># T statistic</span>
+                <span class="n">x2_bar</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>  <span class="c1"># mean of the second distribution</span>
+                <span class="n">x1_std</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">T</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">n1</span> <span class="o">+</span> <span class="n">n2</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">n1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">n2</span><span class="p">))</span>  <span class="c1"># std of first distribution</span>
+                <span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">ttest_ind_from_stats</span><span class="p">(</span><span class="n">x1_bar</span><span class="p">,</span> <span class="n">x1_std</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">x2_bar</span><span class="p">,</span> <span class="n">x2_std</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span><span class="p">:</span>
+                    <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eps</span>
+                <span class="n">pvals_precise</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+                <span class="n">t_precise</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+            <span class="n">pvalue_gt_array</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">selected_ind</span><span class="p">]</span> <span class="o">=</span> <span class="n">pvals_precise</span>
+
+        <span class="n">pvalue_gt_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="n">pvalue_gt_array</span><span class="p">,</span>
+            <span class="n">index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_genes</span><span class="p">,</span>
+            <span class="n">columns</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ls_tfs</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">pvalue_gt_df</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="save_output_files">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.save_output_files">[docs]</a>
+<span class="k">def</span> <span class="nf">save_output_files</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">chip_gt</span><span class="p">,</span> <span class="n">rna_gt</span><span class="p">,</span> <span class="n">rna_gp</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Saves processed data to specified output files as part of the InPheRNo-ChIP project. This function handles the</span>
+<span class="sd">    creation of output directories and manages the naming conventions for output files based on the provided command-line arguments.</span>
+
+<span class="sd">    :param args: Parsed command-line arguments containing output file paths and names.</span>
+<span class="sd">    :type args: argparse.Namespace</span>
+<span class="sd">    :param chip_gt: Processed ChIP-seq data to be saved.</span>
+<span class="sd">    :type chip_gt: pandas.DataFrame</span>
+<span class="sd">    :param rna_gt: Processed RNA-seq gene-TF data to be saved.</span>
+<span class="sd">    :type rna_gt: pandas.DataFrame</span>
+<span class="sd">    :param rna_gp: Processed RNA-seq gene-phenotype data to be saved.</span>
+<span class="sd">    :type rna_gp: pandas.DataFrame</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">)</span>
+    <span class="n">addr_out_pvalue_gp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">output_gene_phenotype</span><span class="si">}{</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">lineage_of_interest</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">rna_gp</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">addr_out_pvalue_gp</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">addr_out_pvalue_gt</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">output_gene_tf</span><span class="si">}{</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">lineage_of_interest</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">rna_gt</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">addr_out_pvalue_gt</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">addr_out_chip_gt</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">output_chip_tf_gene_peaks</span><span class="si">}{</span><span class="s1">&#39;_&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">lineage_of_interest</span><span class="p">)</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">chip_gt</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">addr_out_chip_gt</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved 3 output files to </span><span class="si">{</span><span class="n">args</span><span class="o">.</span><span class="n">out_dir</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="step1_main">
+<a class="viewcode-back" href="../usage.html#InPheC_Step1.step1_main">[docs]</a>
+<span class="k">def</span> <span class="nf">step1_main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Main function for the first step in the InPheRNo-ChIP project pipeline. Orchestrates the execution of data loading,</span>
+<span class="sd">    processing, Elastic Net regression, and saving the output files. This function acts as the entry point when running the script.</span>
+<span class="sd">    </span>
+<span class="sd">    This function follows these steps:</span>
+<span class="sd">    - 1. Parses command-line arguments.</span>
+<span class="sd">    - 2. Loads data from specified directories.</span>
+<span class="sd">    - 3. Processes data to align gene and TF datasets.</span>
+<span class="sd">    - 4. Performs Elastic Net regression to analyze gene-TF relationships.</span>
+<span class="sd">    - 5. Saves the processed data to output files.</span>
+<span class="sd">    </span>
+<span class="sd">    :raises SystemExit: If the dimensions of gene-phenotype data and results from Elastic Net regression do not match, indicating a potential issue in data alignment or processing.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">Step1ArgumentParser</span><span class="p">()</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="c1"># Load data</span>
+    <span class="n">data_loader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">in_dir_chip</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">in_dir_rna</span><span class="p">)</span>
+    <span class="n">chip_both_lineage</span> <span class="o">=</span> <span class="n">data_loader</span><span class="o">.</span><span class="n">load_chip_data</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">lineage_of_interest</span><span class="p">)</span>
+    <span class="n">expr_all</span><span class="p">,</span> <span class="n">gene_phenotype_interest</span> <span class="o">=</span> <span class="n">data_loader</span><span class="o">.</span><span class="n">load_rna_data</span><span class="p">(</span>
+        <span class="n">args</span><span class="o">.</span><span class="n">input_expression</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">input_gene_phenotype_interest</span>
+    <span class="p">)</span>
+    <span class="n">tf_list</span> <span class="o">=</span> <span class="n">data_loader</span><span class="o">.</span><span class="n">load_tf_list</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">input_tf_addr</span><span class="p">)</span>
+
+    <span class="c1"># Filter RNA-seq and ChIP-seq data based on common genes and TFs</span>
+    <span class="n">processor</span> <span class="o">=</span> <span class="n">DataProcessor</span><span class="p">(</span>
+        <span class="n">chip_both_lineage</span><span class="p">,</span> <span class="n">expr_all</span><span class="p">,</span> <span class="n">gene_phenotype_interest</span><span class="p">,</span> <span class="n">tf_list</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">chip_pvalue_of_interest</span>
+    <span class="p">)</span>
+    <span class="n">chip_gt</span><span class="p">,</span> <span class="n">tmp_expr_gene</span><span class="p">,</span> <span class="n">tmp_expr_tf</span><span class="p">,</span> <span class="n">rna_gp</span> <span class="o">=</span> <span class="n">processor</span><span class="o">.</span><span class="n">filter_data</span><span class="p">()</span>  <span class="c1"># 1405 DE-ChIP-Voom Genes</span>
+
+    <span class="c1"># Perform Elastic Net on GENE and TF expression</span>
+    <span class="n">en_processor</span> <span class="o">=</span> <span class="n">ElasticNetProcessor</span><span class="p">(</span><span class="n">tmp_expr_gene</span><span class="p">,</span> <span class="n">tmp_expr_tf</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">max_num_coefs</span><span class="p">)</span>
+    <span class="n">rna_gt</span> <span class="o">=</span> <span class="n">en_processor</span><span class="o">.</span><span class="n">perform_elastic_net</span><span class="p">()</span>
+
+    <span class="c1"># Save results</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">rna_gp</span><span class="o">.</span><span class="n">index</span> <span class="o">!=</span> <span class="n">rna_gt</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="s2">&quot;[GEx] Dimensions do not match!&quot;</span><span class="p">)</span>
+    <span class="n">save_output_files</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">chip_gt</span><span class="p">,</span> <span class="n">rna_gt</span><span class="p">,</span> <span class="n">rna_gp</span><span class="p">)</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">print_logo</span><span class="p">(</span><span class="s2">&quot;Running step 1&quot;</span><span class="p">)</span>
+    <span class="n">step1_main</span><span class="p">()</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2024, Chen Su, Amin Emad.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
