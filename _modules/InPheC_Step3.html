@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InPheC_Step3 &#8212; InPheRNo-ChIP 1.1 documentation</title>
+    <title>InPheC_Step3 &#8212; InPheRNo-ChIP 1.2 documentation</title>
   
   
   
@@ -35,7 +35,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
   <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
-    <script src="../_static/documentation_options.js?v=56dcb7b8"></script>
+    <script src="../_static/documentation_options.js?v=61243dd2"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/InPheC_Step3';</script>
@@ -113,7 +113,7 @@
   
   
   
-    <p class="title logo__title">InPheRNo-ChIP 1.1 documentation</p>
+    <p class="title logo__title">InPheRNo-ChIP 1.2 documentation</p>
   
 </a></div>
     
@@ -148,7 +148,14 @@
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../usage.html">
-                        Usage Guide
+                        Script Reference Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage_own_data.html">
+                        Using InPheRNo-ChIP with Your Own Data
                       </a>
                     </li>
                 
@@ -245,7 +252,14 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../usage.html">
-                        Usage Guide
+                        Script Reference Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage_own_data.html">
+                        Using InPheRNo-ChIP with Your Own Data
                       </a>
                     </li>
                 
@@ -329,7 +343,7 @@ document.write(`
 <span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">InPheC_Step3.py</span>
 
-<span class="sd">This script is an integral part of the InPheRNo-ChIP project&#39;s step 3 process. It primarily deals with the post-processing of posterior probabilities generated from step 2&#39;s probabilistic graphical models (PGMs).</span>
+<span class="sd">This script is an integral part of the InPheRNo-ChIP project&#39;s step 3 process. </span>
 
 <span class="sd">Key Operations:</span>
 
@@ -340,8 +354,7 @@ document.write(`
 <span class="sd">    </span>
 <span class="sd">Usage:</span>
 
-<span class="sd">    - Execute the script via the command line, ensuring all necessary arguments for input and output directories, as well as file names, are correctly specified. </span>
-<span class="sd">    - The script will automatically handle the processing steps and produce the normalized GRN output.</span>
+<span class="sd">    - Run the script from the command line &quot;python InPheC_Step3.py&quot; directly.</span>
 <span class="sd">    - For detailed argument options, use the help option: `python InPheC_Step3.py --help`</span>
 
 <span class="sd">Note:</span>
@@ -881,6 +894,7 @@ document.write(`
 <span class="sd">    :raises ValueError: If processing parameters are incorrect or if files are empty.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">print_logo</span><span class="p">(</span><span class="s2">&quot;Running step3&quot;</span><span class="p">)</span>
+    
     <span class="c1"># Use the Utils class for configuring logging</span>
     <span class="n">Utils</span><span class="o">.</span><span class="n">configure_logging</span><span class="p">(</span><span class="s2">&quot;./logs&quot;</span><span class="p">)</span>
 
