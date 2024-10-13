@@ -97,7 +97,7 @@ This section offers a quick description of what InPheC expects as inputs and out
 - **Location:** `./step3/`
 - **Output 3.1:** `RnCnP_vary-Tp0.0909_nc4_ni4000_nt2000_nb400_minMax.csv` is the final GRN that is phenotype-relevant.
 
-# Documentation
+## Other Documentation
 * [Using your own data](https://Emad-COMBINE-lab.github.io/InPheRNo-ChIP/usage_own_data.html): Guidelines on preparing and integrating your own datasets with InPheRNo-ChIP.
 * [Script Reference Guide](https://Emad-COMBINE-lab.github.io/InPheRNo-ChIP/usage.html): Detailed information on function parameters and code documentation for each script.
 
