@@ -1,7 +1,7 @@
 Installation Guide
 ====================================
 
-This guide provides instructions for setting up **InPheRNo-ChIP** using a Conda environment, specifically tailored for Python 3.10.12 and PyMC 5.9.2.
+This guide provides instructions for setting up **InPheRNo-ChIP** using a Conda environment, specifically tailored for Python 3.11.5 and PyMC 5.9.2.
 
 .. contents:: 
    :local:
@@ -10,12 +10,12 @@ This guide provides instructions for setting up **InPheRNo-ChIP** using a Conda 
 Prerequisites
 -------------
 
-Before installing **InPheRNo-ChIP**, ensure that Conda is installed on your system. Conda simplifies package management and deployment. If Conda is not installed, download it from [Anaconda's official website](https://www.anaconda.com/products/distribution).
+Before installing **InPheRNo-ChIP**, ensure that Conda is installed on your system. Conda simplifies package management and deployment. If Conda is not installed, download it from `Anaconda's official website <https://www.anaconda.com/products/distribution>`_.
 
 Creating a Conda Environment
 ----------------------------
 
-**InPheRNo-ChIP** requires specific versions of libraries, managed using a Conda environment. The project repository includes an `inpheC_0820.yml` file that specifies these dependencies, including Python 3.10.12 and PyMC 5.9.2.
+**InPheRNo-ChIP** requires specific versions of libraries, managed using a Conda environment. 
 
 To set up and activate the Conda environment, follow these steps:
 
@@ -30,7 +30,7 @@ To set up and activate the Conda environment, follow these steps:
 
 2. **Create the Conda Environment**:
    
-   Use the `inpheC_0820.yml` file, which is pre-configured for Python 3.10.12 and PyMC 5.9.2, to create a new Conda environment:
+   Use the `inpheC_0820.yml` file, which is pre-configured for Python 3.11.5 and PyMC 5.9.2, to create a new Conda environment:
 
    .. code-block:: bash
 
