@@ -82,9 +82,9 @@ We will walk through the steps needed to prepare these inputs from your RNA-seq 
 
 6. **Prepare Input Files**:
 
-   - Save the voom-transformed and inverse-quantile normalized expression data from step 5 here to a CSV file (e.g., input 1.1 in the GitHub repo's `README.md <https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP/tree/main#readme>`_): ``RNAseq_expr_voom_normalized.csv``).
-   - Save the DE results for significant genes from step 6 here in a CSV file (e.g., input 1.2: ``RNAseq_pval_gene-phenotype_significant.csv``).
-   - Save the DE results for all genes (not just significant ones) from step 6 here in a CSV file  (e.g., input 1.3: ``RNAseq_pval_gene-phenotype_allGenes.csv``)
+   - Save the voom-transformed and inverse-quantile normalized expression data from step 4 here to a CSV file (e.g., input 1.1 in the GitHub repo's `README.md <https://github.com/Emad-COMBINE-lab/InPheRNo-ChIP/tree/main#readme>`_): ``RNAseq_expr_voom_normalized.csv``).
+   - Save the DE results for significant genes from step 5 here in a CSV file (e.g., input 1.2: ``RNAseq_pval_gene-phenotype_significant.csv``).
+   - Save the DE results for all genes (not just significant ones) from step 5 here in a CSV file  (e.g., input 1.3: ``RNAseq_pval_gene-phenotype_allGenes.csv``)
    - All three files should be placed in ``./Data/RNA_seq/``
 
 **Notes**:
